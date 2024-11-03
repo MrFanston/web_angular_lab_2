@@ -1,0 +1,19 @@
+<app-filter-panel (applyFilters)="filterRoutes($event)"></app-filter-panel>
+
+<div *ngFor="let route of routes" class="route-item">
+  <h3>{{ route.destination }} ({{ route.routeId }})</h3>
+  <p>Отправление: {{ route.departureTime }} | Прибытие: {{ route.arrivalTime }}</p>
+  <p>Длительность: {{ route.duration }} | Цена: {{ route.price }} ₽</p>
+  <button (click)="toggleDetails(route)">
+    {{ route.showDetails ? 'Скрыть' : 'Подробнее' }}
+  </button>
+
+  <div *ngIf="route.showDetails">
+    <h4>Остановки:</h4>
+    <ul>
+      <li *ngFor="let stop of route.stops">
+        {{ stop.stationName }} - Прибытие: {{ stop.arrivalTime }} / Отправление: {{ stop.departureTime }}
+      </li>
+    </ul>
+  </div>
+</div>

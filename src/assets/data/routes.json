@@ -1,0 +1,28 @@
+[
+  {
+    "routeId": "A101",
+    "destination": "Smalltown",
+    "departureTime": "08:30",
+    "arrivalTime": "10:00",
+    "duration": "1h 30m",
+    "price": 150,
+    "stops": [
+      { "stationName": "Main Station", "arrivalTime": "08:30", "departureTime": "08:40" },
+      { "stationName": "Lakeview Stop", "arrivalTime": "09:15", "departureTime": "09:20" },
+      { "stationName": "Smalltown Station", "arrivalTime": "10:00", "departureTime": "10:00" }
+    ]
+  },
+  {
+    "routeId": "B202",
+    "destination": "Rivertown",
+    "departureTime": "09:00",
+    "arrivalTime": "11:30",
+    "duration": "2h 30m",
+    "price": 200,
+    "stops": [
+      { "stationName": "Central Hub", "arrivalTime": "09:00", "departureTime": "09:15" },
+      { "stationName": "Eastside Stop", "arrivalTime": "10:00", "departureTime": "10:10" },
+      { "stationName": "Rivertown Station", "arrivalTime": "11:30", "departureTime": "11:30" }
+    ]
+  }
+]

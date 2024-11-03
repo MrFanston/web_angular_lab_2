@@ -1,0 +1,33 @@
+<div class="filter-panel">
+  <mat-form-field>
+    <mat-label>Пункт назначения</mat-label>
+    <input matInput [(ngModel)]="filterOptions.destination" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Время отправления</mat-label>
+    <input matInput [(ngModel)]="filterOptions.departureTime" type="time" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Максимальная длительность (мин)</mat-label>
+    <input matInput [(ngModel)]="filterOptions.maxDuration" type="number" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Максимальная цена (₽)</mat-label>
+    <input matInput [(ngModel)]="filterOptions.maxPrice" type="number" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Сортировка</mat-label>
+    <mat-select [(ngModel)]="filterOptions.sortBy" (selectionChange)="onApplyFilters()">
+      <mat-option value="">Без сортировки</mat-option>
+      <mat-option value="price">По цене</mat-option>
+      <mat-option value="duration">По длительности</mat-option>
+      <mat-option value="departureTime">По времени отправления</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="onApplyFilters()">Применить фильтры</button>
+</div>
