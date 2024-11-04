@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2 class="title">Расписание автобусов</h2>
+  <div *ngFor="let route of routes" class="route-container list-group-item mb-3 p-3">
+    <div class="route-info">
+      <strong>Маршрут до: </strong>
+      <a [routerLink]="['/route', route.destination]" class="destination-link">
+        {{ route.destination }}
+      </a>
+      <span><strong>Отправление:</strong> {{ route.departureTime }}</span>
+      <span><strong>Прибытие:</strong> {{ route.arrivalTime }}</span>
+      <span><strong>Время в пути:</strong> {{ route.duration }}</span>
+      <span><strong>Цена:</strong> {{ route.price }}₽</span>
+    </div>
+  </div>
+</div>

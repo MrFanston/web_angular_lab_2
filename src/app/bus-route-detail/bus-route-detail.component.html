@@ -1,0 +1,26 @@
+<div class="container mt-4 route-detail-container" *ngIf="route">
+  <div class="route-info">
+    <h2>Детали маршрута до {{ route.destination }}</h2>
+    <p><strong>Отправление:</strong> {{ route.departureTime }}</p>
+    <p><strong>Прибытие:</strong> {{ route.arrivalTime }}</p>
+    <p><strong>Время в пути:</strong> {{ route.duration }}</p>
+    <p><strong>Цена:</strong> {{ route.price }}</p>
+
+    <h5>Промежуточные станции:</h5>
+    <ul>
+      <li *ngFor="let stop of route.stops" class="stop-item">
+        <div class="stop-info">
+          <span class="station">{{ stop.station }}</span>
+          <span class="arrival-time">Прибытие: {{ stop.arrivalTime }}</span>
+        </div>
+      </li>
+    </ul>
+
+    <a [routerLink]="['/']" class="btn btn-primary">Назад</a>
+  </div>
+
+  <!-- Блок для изображения карты -->
+  <div class="route-map">
+    <img [src]="route.mapImagePath" alt="Карта маршрута" class="map-image">
+  </div>
+</div>

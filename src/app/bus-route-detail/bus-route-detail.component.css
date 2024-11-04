@@ -1,0 +1,41 @@
+.stop-item {
+  display: flex; /* Используем Flexbox для выравнивания */
+  justify-content: space-between; /* Разделяет станции и время */
+  margin-bottom: 10px; /* Отступ между пунктами списка */
+}
+
+.stop-info {
+  flex: 1; /* Задает равное пространство для элементов */
+}
+
+.station {
+  font-weight: bold; /* Выделяет название станции */
+}
+
+.arrival-time {
+  margin-left: 10px; /* Отступ слева для времени прибытия */
+  font-style: italic; /* Упрощает визуальное восприятие */
+}
+.route-detail-container {
+  display: flex;         /* Горизонтальное выравнивание текста и изображения */
+  gap: 20px;             /* Промежуток между текстом и картой */
+  align-items: flex-start; /* Выровняем элементы по верхнему краю */
+}
+
+.route-info {
+  flex: 2;               /* Текст занимает больше места */
+}
+
+.route-map {
+  flex: 1;               /* Карта занимает меньше места */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-image {
+  max-width: 200%;       /* Адаптивная ширина изображения */
+  height: auto;          /* Автоматическая высота */
+  border-radius: 8px;    /* Скругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для карты */
+}

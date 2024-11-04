@@ -1,0 +1,34 @@
+.title {
+  text-align: center; /* Центрирует текст */
+  margin-bottom: 30px;
+}
+
+.route-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+}
+
+.route-info {
+  font-size: 20px; /* Увеличение шрифта заголовка */
+  display: flex;
+  justify-content: space-between; /* Равномерно распределяет элементы */
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.route-info span {
+  flex: 1; /* Задает равное пространство для каждого элемента */
+  text-align: center; /* Центрирует текст в каждом элементе */
+}
+
+.destination-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.destination-link:hover {
+  text-decoration: underline;
+}

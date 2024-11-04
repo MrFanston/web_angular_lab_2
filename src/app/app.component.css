@@ -1,0 +1,15 @@
+.navbar-nav {
+  width: 100%;
+}
+
+.nav-title {
+  text-align: center; /* Центрирует текст по горизонтали */
+  font-weight: bold;
+  width: 100%; /* Растягивает элемент на всю ширину */
+  letter-spacing: 0.2em; /* Устанавливает межбуквенный интервал */
+  font-size: 30px; /* Увеличение шрифта заголовка */
+}
+
+.navbar {
+  background-color: rgba(234, 202, 162, 0.85);
+}
